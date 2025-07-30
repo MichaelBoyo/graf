@@ -118,3 +118,12 @@ kubectl delete namespace k6
 - Provision Grafana dashboards and data sources via Helm
 - Support persistent storage for Prometheus and Grafana
 - External access and authentication setup
+
+## Screenshots
+
+![k6-logs](k6-logs.png)
+![k6-metrics-grafana](k6-metrics-grafana.png)
+![k6-metrics-list-prometheus](k6-metrics-list-prometheus.png)
+![k6-metrics-prometheus](k6-metrics-prometheus.png)
+![deployed-services](deployed-services.png)
+
