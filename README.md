@@ -22,6 +22,7 @@ k6-stack/
     ├── grafana-service.yaml
     ├── k6-configmap.yaml
     └── k6-deployment.yaml
+    └── grafana-datasource-config.yaml
 ```
 
 ## Prerequisites
@@ -103,10 +104,7 @@ This script is stored in a ConfigMap and mounted into the k6 container.
 1. Open Grafana using `minikube service -n k6 grafana`
 2. Add Prometheus as a data source
 3. Import a dashboard (e.g. k6 dashboard ID 2587) or create your own
-4. Query available metrics such as:
-   - `http_reqs`
-   - `http_req_duration`
-   - `iterations`
+4. Query available metrics
 
 ## Uninstall
 

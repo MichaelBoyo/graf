@@ -22,7 +22,7 @@ spec:
             - /scripts/test.js
           env:
             - name: K6_PROMETHEUS_RW_SERVER_URL
-              value: {{ .Values.k6.prometheus_rw_url }}
+              value: {{ tpl .Values.k6.prometheus_rw_url . }}
           volumeMounts:
             - name: script-volume
               mountPath: /scripts

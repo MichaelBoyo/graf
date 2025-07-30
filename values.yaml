@@ -6,7 +6,7 @@ prometheus:
   tag: v2.47.2
   name: prometheus
   port: 9090
-  url: http://prometheus.k6.svc.cluster.local:9090
+  url: "http://prometheus.{{ .Release.Namespace }}.svc.cluster.local:9090"
 
 grafana:
   image: grafana/grafana
@@ -18,4 +18,4 @@ k6:
   image: grafana/k6
   tag: latest
   name: k6
-  prometheus_rw_url: http://prometheus.k6.svc.cluster.local:9090/api/v1/write
+  prometheus_rw_url: "http://prometheus.{{ .Release.Namespace }}.svc.cluster.local:9090/api/v1/write"

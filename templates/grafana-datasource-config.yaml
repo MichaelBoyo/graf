@@ -11,6 +11,6 @@ data:
       - name: Prometheus
         type: prometheus
         access: proxy
-        url: {{ .Values.prometheus.url }}
+        url: {{ tpl .Values.prometheus.url . }}
         isDefault: true
         editable: true
